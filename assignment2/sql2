@@ -1,0 +1,7 @@
+select * from 
+
+(select a.row_num, b.col_num, SUM(a.value*b.value) 
+from A a join B b on a.col_num = b.row_num 
+GROUP BY a.row_num, b.col_num) C 
+
+where C.row_num = 2 and C.col_num = 3;

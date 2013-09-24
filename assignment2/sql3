@@ -1,0 +1,37 @@
+select * 
+from 
+
+(select d.docid, d_t.docid, SUM(d.count*d_t.count) 
+
+from
+ 
+	(select * 
+		from frequency
+		union
+		select 'q' as docid, 'washington' as term, 1 as count 
+		union
+		select 'q' as docid, 'taxes' as term, 1 as count
+		union 
+		select 'q' as docid, 'treasury' as term, 1 as count) d 
+
+	join
+
+	(select d.term, d.docid, d.count 
+		from 
+
+		(select * 
+			from frequency
+			union
+			select 'q' as docid, 'washington' as term, 1 as count 
+			union
+			select 'q' as docid, 'taxes' as term, 1 as count
+			union 
+			select 'q' as docid, 'treasury' as term, 1 as count) d 
+
+		GROUP BY d.term, d.docid) d_t 
+		on d.term = d_t.term 
+		where d.docid = '10080_txt_crude' and d_t.docid = '17035_txt_earn'
+		GROUP BY d.docid , d_t.docid) C ;
+
+
+
