@@ -1,4 +1,4 @@
 datasci-001
 ===========
 
-Introduction to Data Science
+Introduction to Data Science (University of Washington)
