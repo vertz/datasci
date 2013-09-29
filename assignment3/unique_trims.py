@@ -2,7 +2,17 @@ import MapReduce
 import sys
 
 """
-Word Count Example in the Simple Python MapReduce Framework
+Consider a set of key-value pairs where each key is sequence id and each value is a string of nucleotides, 
+e.g., GCTTCCGAAATGCTCGAA....
+
+Write a MapReduce query to remove the last 10 characters from each string of nucleotides, 
+then remove any duplicates generated.
+
+The input is a 2 element list: [sequence id, nucleotides]
+sequence id: Unique identifier formatted as a string
+nucleotides: Sequence of nucleotides formatted as a string
+
+The output from the reduce function should be the unique trimmed nucleotide strings.
 """
 
 mr = MapReduce.MapReduce()
