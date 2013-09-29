@@ -2,7 +2,17 @@ import MapReduce
 import sys
 
 """
-Word Count Example in the Simple Python MapReduce Framework
+Create an Inverted index. 
+
+Given a set of documents, an inverted index is a dictionary 
+where each word is associated with a list of the document identifiers in which that word appears.  
+
+The input is a 2 element list: [document_id, text]
+document_id: document identifier formatted as a string
+text: text of the document formatted as a string
+
+The output should be a (word, document ID list) tuple 
+where word is a String and document ID list is a list of Strings.
 """
 
 mr = MapReduce.MapReduce()
