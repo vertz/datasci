@@ -2,7 +2,16 @@ import MapReduce
 import sys
 
 """
-Word Count Example in the Simple Python MapReduce Framework
+The relationship "friend" is often symmetric, meaning that if I am your friend, you are my friend. 
+Implement a MapReduce algorithm to check whether this property holds. 
+Generate a list of all non-symmetric friend relationships.
+
+The input is a 2 element list: [personA, personB]
+personA: Name of a person formatted as a string
+personB: Name of one of personA’s friends formatted as a string
+This implies that personB is a friend of personA, but it does not imply that personA is a friend of personB.
+
+The output should be the (person, friend) and (friend, person) tuples for each asymmetric friendship.
 """
 
 mr = MapReduce.MapReduce()
