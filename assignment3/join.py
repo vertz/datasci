@@ -2,7 +2,16 @@ import MapReduce
 import sys
 
 """
-Word Count Example in the Simple Python MapReduce Framework
+Implement a relational join as a MapReduce query
+
+SELECT * 
+FROM Orders, LineItem 
+WHERE Order.order_id = LineItem.order_id
+
+MapReduce query should produce the same information as this SQL query.  
+
+consider the two input tables, Order and LineItem, as one big concatenated bag of records 
+which gets fed into the map function record by record
 """
 
 mr = MapReduce.MapReduce()
